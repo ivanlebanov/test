@@ -7,7 +7,7 @@
           <p>Customers spend <strong>£{{ average }}</strong> on average.</p>
       </div>
       <div class="panel half" v-if="users.length > 0">
-        <h2>The lads and their average order in desc order.</h2>
+        <h2>The lads and their average order.</h2>
         <ul class="user-list">
           <li v-for="user in users">
             <strong>{{ user.customer.first_name }} {{ user.customer.last_name }}</strong> has spend <strong>£{{ user.average }}</strong> on average.

@@ -65,7 +65,7 @@ class OrderController extends Controller
     {
       $orders = Order::selectRaw('format(AVG(total_price), 2) average, user_id')
       ->groupBy('user_id')
-     ->orderByRaw('average DESC')
+     ->orderByRaw('average ASC')
       ->get();
 
       foreach ($orders as $key => $order) {
